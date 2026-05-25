@@ -1,0 +1,350 @@
+table tb_cheklist
+	lineageTag: 0bfce57b-2b80-4889-b836-28b084508221
+
+	column _id
+		dataType: string
+		lineageTag: b38319a8-dc9b-4b4f-a190-ff4374df3eb9
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ativo
+		dataType: string
+		lineageTag: 33df467e-760f-41ec-b99d-1c0469a789d3
+		summarizeBy: none
+		sourceColumn: Ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	column CadastradoEm
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8f67e394-05e7-403c-92cd-ee92f71ad08a
+		summarizeBy: none
+		sourceColumn: CadastradoEm
+
+		variation Variation
+			isDefault
+			relationship: 4716e8e9-a9a7-492c-b971-697b4d1b5884
+			defaultHierarchy: LocalDateTable_0b67b71c-3541-4647-9fdc-a33245196fc4.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EnviaResumoUnidade
+		dataType: string
+		lineageTag: 4f3204b5-c276-4307-8951-b81ae4d70893
+		summarizeBy: none
+		sourceColumn: EnviaResumoUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_8
+		dataType: string
+		lineageTag: b523df11-8c5b-459c-b87f-80700ea1a594
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_8
+
+		annotation SummarizationSetBy = Automatic
+
+	column TiposUnidades
+		dataType: string
+		lineageTag: ae41ab9d-d2ed-463c-a1cd-87d651ae0298
+		summarizeBy: none
+		sourceColumn: TiposUnidades
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_6
+		dataType: string
+		lineageTag: d26de959-b6a4-4a5b-8418-717573b5dcca
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_6
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnviaIntegra
+		dataType: string
+		lineageTag: 279d5c7d-db61-4f93-b98d-e7f760de3f5e
+		summarizeBy: none
+		sourceColumn: EnviaIntegra
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinPontos
+		dataType: string
+		lineageTag: b6c8daea-31fd-4df2-a298-86a37075727d
+		summarizeBy: none
+		sourceColumn: MinPontos
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_4
+		dataType: string
+		lineageTag: fd7974b2-1ad7-4def-8a89-cdfe645ebade
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_4
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_2
+		dataType: string
+		lineageTag: 578949ad-26f4-4830-84af-cbe2b045ec2a
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_0
+		dataType: string
+		lineageTag: cb51d244-ae12-488b-b9af-d377cfc4763a
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_0
+
+		annotation SummarizationSetBy = Automatic
+
+	column PerguntasTotal
+		dataType: int64
+		formatString: 0
+		lineageTag: a66f855e-a165-4f20-9814-5005e2b3dc2f
+		summarizeBy: sum
+		sourceColumn: PerguntasTotal
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailsAlertas
+		dataType: string
+		lineageTag: 82e99213-f0ce-4136-a577-d327d408acb6
+		summarizeBy: none
+		sourceColumn: EmailsAlertas
+
+		annotation SummarizationSetBy = Automatic
+
+	column ViaLeitor
+		dataType: string
+		lineageTag: b4672511-e2da-45d3-bacb-cc2c6221376a
+		summarizeBy: none
+		sourceColumn: ViaLeitor
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnviaPlanoAcaoUnidade
+		dataType: string
+		lineageTag: 616b1937-0a0a-47a3-88ec-ee0f7a3fb1b9
+		summarizeBy: none
+		sourceColumn: EnviaPlanoAcaoUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas
+		dataType: string
+		lineageTag: 292b1a89-4ef4-46c1-ac1b-4814b1eb731d
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas
+
+		annotation SummarizationSetBy = Automatic
+
+	column PermitePlanoAcao
+		dataType: string
+		lineageTag: 1ca43c82-fc93-4fcc-a571-8a052a2609a8
+		summarizeBy: none
+		sourceColumn: PermitePlanoAcao
+
+		annotation SummarizationSetBy = Automatic
+
+	column CadastradoPor
+		dataType: string
+		lineageTag: cb29ef02-4203-424a-aa43-a727399290f0
+		summarizeBy: none
+		sourceColumn: CadastradoPor
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailRemetente
+		dataType: string
+		lineageTag: c4b8c1e4-5510-41ca-b196-fc654a85e54c
+		summarizeBy: none
+		sourceColumn: EmailRemetente
+
+		annotation SummarizationSetBy = Automatic
+
+	column PonderadoSecao
+		dataType: string
+		lineageTag: 91e66c1b-3a5c-4dff-8069-f3977926e74a
+		summarizeBy: none
+		sourceColumn: PonderadoSecao
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_9
+		dataType: string
+		lineageTag: 132dce99-98e7-4101-a1bf-04c734be3ac8
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_9
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_7
+		dataType: string
+		lineageTag: 2de1b9bb-8d31-408f-94c0-847018e01459
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_7
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaxPontos
+		dataType: int64
+		formatString: 0
+		lineageTag: cc16b580-58a2-46c7-a08a-c180000ed0ad
+		summarizeBy: sum
+		sourceColumn: MaxPontos
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeRemetente
+		dataType: string
+		lineageTag: f3e45c99-873a-4ffb-ac4b-bf51fa426e4e
+		summarizeBy: none
+		sourceColumn: NomeRemetente
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_5
+		dataType: string
+		lineageTag: 64be8ac1-89eb-4f15-b794-b72af1f6ad24
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column PerguntasAtivas
+		dataType: int64
+		formatString: 0
+		lineageTag: bf246cc6-73ff-42a0-b980-f82222dec786
+		summarizeBy: sum
+		sourceColumn: PerguntasAtivas
+
+		annotation SummarizationSetBy = Automatic
+
+	column PermiteAssinatura
+		dataType: string
+		lineageTag: 7195a00a-f8bb-43e3-8b27-3742bec09f64
+		summarizeBy: none
+		sourceColumn: PermiteAssinatura
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_3
+		dataType: string
+		lineageTag: 771c1583-7dde-41ba-b578-8ad2dba831ca
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_1
+		dataType: string
+		lineageTag: a77dd32d-6899-4a98-95ab-994af86fabeb
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descricao
+		dataType: string
+		lineageTag: 15112707-0554-4c48-9f73-acc5e33b455b
+		summarizeBy: none
+		sourceColumn: Descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ponderado
+		dataType: string
+		lineageTag: 03033bc6-7942-4a59-b933-5837a4238fe6
+		summarizeBy: none
+		sourceColumn: Ponderado
+
+		annotation SummarizationSetBy = Automatic
+
+	column LimiteMensal
+		dataType: string
+		lineageTag: 091497c2-60f9-41f0-8000-ceb97a03a8f5
+		summarizeBy: none
+		sourceColumn: LimiteMensal
+
+		annotation SummarizationSetBy = Automatic
+
+	column idChecklist
+		dataType: string
+		lineageTag: 56461417-9e1e-4206-8aba-f508aa0ab975
+		summarizeBy: none
+		sourceColumn: idChecklist
+
+		annotation SummarizationSetBy = Automatic
+
+	column Checklist
+		dataType: string
+		lineageTag: 067de267-9590-4a72-9ffc-26a8a5c8b0a8
+		summarizeBy: none
+		sourceColumn: Checklist
+
+		annotation SummarizationSetBy = Automatic
+
+	column UsuariosAlertas_10
+		dataType: string
+		lineageTag: bf97f0bf-d657-4b30-8f0c-c7857c702278
+		summarizeBy: none
+		sourceColumn: UsuariosAlertas_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHKSUM
+		dataType: string
+		lineageTag: bc967b76-b106-4eae-8817-3be1d6fb4f2b
+		summarizeBy: none
+		sourceColumn: CHKSUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataCarga
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fba0d396-30c2-4dfb-82bb-f38642f5e426
+		summarizeBy: none
+		sourceColumn: DataCarga
+
+		variation Variation
+			isDefault
+			relationship: 1190321a-cba9-40e1-b2ad-54b54f1891d2
+			defaultHierarchy: LocalDateTable_7e894088-7efe-4b87-8dde-a5d10205f7ee.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition tb_cheklist = m
+		mode: import
+		source = ```
+				let
+				    Fonte = Sql.Database(
+				        "PR-S188\DW",
+				        "stage",
+				        [
+				            Query = " 
+				                        select *
+				                         from stage.moki.checklists c  ;"
+				        ]
+				    ),
+				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each true),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"CadastradoEm", type date}, {"DataCarga", type date}}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Tipo Alterado", each ([Ativo] = "true"))
+				in
+				    #"Linhas Filtradas1"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

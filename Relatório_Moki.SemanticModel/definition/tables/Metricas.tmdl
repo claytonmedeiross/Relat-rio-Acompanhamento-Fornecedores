@@ -1,0 +1,171 @@
+table Metricas
+	lineageTag: 4fa68454-c563-4eb5-977e-4cec5b354547
+
+	measure 'Qtd Avaliações' =
+			COALESCE(
+			DISTINCTCOUNT(tb_respostas[IDMoki])
+			,0)
+		formatString: 0
+		lineageTag: 59ec8848-1627-460d-856d-d47b1172500c
+
+	measure %Aproveitamento =
+			COALESCE(
+			DIVIDE(
+			    SUM(tb_respostas[PontosRealizados]),
+			    SUM(tb_respostas[PontosPossiveis])
+			),
+			0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8bc71528-b7b2-429d-9996-1a4786aa8aae
+
+	measure 'Soma de pontos' = SUM(tb_respostas[PontosRealizados])
+		lineageTag: d268eb38-4185-4ed2-b653-d47111ac67a6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Rank Respostas' =
+			
+			RANKX(
+			    ALL(tb_respostas[Resposta]),
+			    [Total Inconformes],
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		lineageTag: 20cb859e-0b80-4189-9a65-808a20debba8
+
+	measure 'Percentual Acumulado Pareto' = ```
+			
+			VAR TotalGeral =
+			    CALCULATE(
+			        [Total Inconformes],
+			        ALL(tb_respostas[Resposta])
+			    )
+			
+			VAR RankAtual =
+			    MAXX(
+			        VALUES(tb_respostas[Resposta]),
+			        [Rank Respostas]
+			    )
+			
+			VAR Acumulado =
+			    CALCULATE(
+			       [Total Inconformes],
+			        FILTER(
+			            ALL(tb_respostas[Resposta]),
+			            [Rank Respostas] <= RankAtual
+			        )
+			    )
+			
+			RETURN
+			    
+			    DIVIDE(Acumulado, TotalGeral)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2e67deb6-3c95-49ce-95c6-ab0e785f1cef
+
+	measure 'Total Inconformes' =
+			
+			CALCULATE(
+			    COUNTROWS(tb_respostas),
+			    tb_respostas[Inconforme] = "True"
+			)
+		formatString: 0
+		lineageTag: dac52aa8-90d7-472e-a2eb-c285984cbf5c
+
+	measure 'Variação de Soma de PontosRealizados por Checklist' =
+			
+			VARX.P(
+				KEEPFILTERS(VALUES('tb_cheklist'[Checklist])),
+				CALCULATE(SUM('tb_respostas'[PontosRealizados]))
+			)
+		lineageTag: a292a8da-cdb2-417f-bb00-dd121f1d8dc3
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "VariancePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Meta 95%' = 0.95
+		formatString: 0%;-0%;0%
+		lineageTag: 70148eb0-192e-4c65-9ab8-34786174da76
+
+	measure 'Label Avaliação' =
+			
+			VAR quantidade = [Qtd Avaliações]
+			VAR Perc = [%Aproveitamento]
+			RETURN
+			    quantidade & " | " & FORMAT(Perc, "00%")
+		lineageTag: 3483c5c7-06da-4288-97ff-3b82e689e039
+
+	measure %/Aproveitamento =
+			COALESCE(
+			DIVIDE(
+			    SUM(tb_respostas[PontosRealizados]),
+			    SUM(tb_respostas[PontosPossiveis])
+			),
+			0
+			)
+		formatString: 0%;-0%;0%
+		lineageTag: 31d861ab-b302-4075-bc2d-315a7011193d
+
+	measure '%Aproveitamento Mês Anterior' = ```
+			
+			CALCULATE(
+			    [%/Aproveitamento],
+			    DATEADD('d_calendario'[Date], -1, MONTH)
+			)
+			
+			```
+		lineageTag: 3aea3db6-b456-4de8-8389-c83640f46cbb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variação % Mês' =
+			
+			VAR Atual = [%/Aproveitamento]
+			VAR Anterior = [%Aproveitamento Mês Anterior]
+			RETURN
+			DIVIDE(Atual - Anterior, Anterior, 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 92e38613-324c-4842-9e3e-8244892df2c8
+
+	measure 'Ícone Variação' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Variação % Mês] > 0, "▲",
+			    [Variação % Mês] < 0, "▼",
+			    "■"
+			)
+		lineageTag: 709a9a55-260d-4244-9884-570e648ce392
+
+	column 'Coluna 1'
+		dataType: string
+		isHidden
+		lineageTag: 454f495f-81be-4523-8e24-9ad3338f4cf2
+		summarizeBy: none
+		sourceColumn: Coluna 1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Metricas = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

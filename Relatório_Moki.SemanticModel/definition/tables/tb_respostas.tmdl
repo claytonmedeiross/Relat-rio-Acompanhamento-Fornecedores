@@ -1,0 +1,663 @@
+table tb_respostas
+	lineageTag: e2ff92ea-5562-4565-b90f-5852bb1bae26
+
+	column _id
+		dataType: string
+		lineageTag: 3e580b70-078d-4a02-8cb0-c3080f1a0725
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column idChecklist
+		dataType: string
+		lineageTag: f9a08b49-3fe6-41e1-b4b5-c734e2e8200b
+		summarizeBy: none
+		sourceColumn: idChecklist
+
+		annotation SummarizationSetBy = Automatic
+
+	column Checklist
+		dataType: string
+		lineageTag: ed5846cd-91d6-41bc-8c94-17610b1ea2a7
+		summarizeBy: none
+		sourceColumn: Checklist
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeSubRegional
+		dataType: string
+		lineageTag: b2613126-0ce5-4b7e-82e2-7a78a2d60036
+		summarizeBy: none
+		sourceColumn: NomeSubRegional
+
+		annotation SummarizationSetBy = Automatic
+
+	column NaoAplicavel
+		dataType: string
+		lineageTag: 19108d48-dca2-4c53-b2c3-087b77652c40
+		summarizeBy: none
+		sourceColumn: NaoAplicavel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bandeira
+		dataType: string
+		lineageTag: ae17e4ac-47dc-4503-ba2f-a1f12521c8c6
+		summarizeBy: none
+		sourceColumn: Bandeira
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChecklistAtivo
+		dataType: string
+		lineageTag: 90fce775-1d5f-4ae1-9d45-f0c207b5d734
+		summarizeBy: none
+		sourceColumn: ChecklistAtivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comentarios
+		dataType: string
+		lineageTag: f5da9773-57f2-4ba5-9def-5a98fc5fa951
+		summarizeBy: none
+		sourceColumn: Comentarios
+
+		annotation SummarizationSetBy = Automatic
+
+	column PontosRealizados
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 8670b906-3e27-4d9c-b508-38a4a758435f
+		summarizeBy: sum
+		sourceColumn: PontosRealizados
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalPontosPossiveis
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b1d029e-72ea-4322-9203-2ad4a159c6a7
+		summarizeBy: sum
+		sourceColumn: TotalPontosPossiveis
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		lineageTag: 5d81660b-1122-43d4-9f34-dd511ef87919
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataEncerramento
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 298accc7-b04c-417e-9a95-2a0482747ebe
+		summarizeBy: none
+		sourceColumn: DataEncerramento
+
+		variation Variation
+			isDefault
+			relationship: ce5ca0d8-45c9-486f-9ead-8ecb1a66ba37
+			defaultHierarchy: LocalDateTable_ee3d693e-e8d5-4bec-b87f-530720ff1489.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column HoraAvaliacao
+		dataType: string
+		lineageTag: 0d6ede88-11cf-4238-9ac8-819a524e170a
+		summarizeBy: none
+		sourceColumn: HoraAvaliacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_1
+		dataType: string
+		lineageTag: aa24b0a9-7e1d-4c46-a049-67af35d0b36f
+		summarizeBy: none
+		sourceColumn: Fotos_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unidade
+		dataType: string
+		lineageTag: 0b1bb873-fc6d-40ca-8831-16b7f64671ec
+		summarizeBy: none
+		sourceColumn: Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column idPergunta
+		dataType: string
+		lineageTag: 3b30e468-2d06-4b3c-854a-dd8c281d4ae9
+		summarizeBy: none
+		sourceColumn: idPergunta
+
+		annotation SummarizationSetBy = Automatic
+
+	column idAutor
+		dataType: string
+		lineageTag: b0b8ec25-6d58-4626-ae88-75c0f24aea9b
+		summarizeBy: none
+		sourceColumn: idAutor
+
+		annotation SummarizationSetBy = Automatic
+
+	column AutorAtivo
+		dataType: string
+		lineageTag: f980be01-816b-4a9a-a87d-14d7459fc8e8
+		summarizeBy: none
+		sourceColumn: AutorAtivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column NaoAplicaveis
+		dataType: int64
+		formatString: 0
+		lineageTag: fde79e17-a2ac-493d-9d17-49cebf66d49c
+		summarizeBy: sum
+		sourceColumn: NaoAplicaveis
+
+		annotation SummarizationSetBy = Automatic
+
+	column idAvaliacao
+		dataType: string
+		lineageTag: 1aaee166-ca3e-4acd-9899-e4f5a46a053e
+		summarizeBy: none
+		sourceColumn: idAvaliacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZeraChecklist
+		dataType: string
+		lineageTag: e357ac55-341f-4cb5-bc89-5a36b6f4a448
+		summarizeBy: none
+		sourceColumn: ZeraChecklist
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_5
+		dataType: string
+		lineageTag: a4805fd8-391d-4041-b368-4084ed0a58c7
+		summarizeBy: none
+		sourceColumn: Fotos_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeFranqueado
+		dataType: string
+		lineageTag: 072deeca-8bff-4a33-8f15-e5922eccde82
+		summarizeBy: none
+		sourceColumn: NomeFranqueado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Inconformidades
+		dataType: int64
+		formatString: 0
+		lineageTag: 378e58c6-00c8-4ea1-a90e-1bee514c4de9
+		summarizeBy: sum
+		sourceColumn: Inconformidades
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 775298e0-214e-422a-8ee9-eca828558a44
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column PontosPossiveis
+		dataType: double
+		lineageTag: 6705221e-99de-4c3c-9e0f-dff56d8bf3e4
+		summarizeBy: sum
+		sourceColumn: PontosPossiveis
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AproveitamentoResposta
+		dataType: double
+		lineageTag: 31ad5ede-91e7-4dab-9651-f0b256e882f1
+		summarizeBy: sum
+		sourceColumn: AproveitamentoResposta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fotos_0
+		dataType: string
+		lineageTag: 165b531b-aeba-4386-97f2-41359cb63a5c
+		summarizeBy: none
+		sourceColumn: Fotos_0
+
+		annotation SummarizationSetBy = Automatic
+
+	column idSecao
+		dataType: string
+		lineageTag: 8b2bed3a-2d1f-41dd-a650-1c826d6f410b
+		summarizeBy: none
+		sourceColumn: idSecao
+
+		annotation SummarizationSetBy = Automatic
+
+	column idUnidade
+		dataType: string
+		lineageTag: aae65d98-313b-4c92-a546-406e3f9dac15
+		summarizeBy: none
+		sourceColumn: idUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodigoUnidade
+		dataType: string
+		lineageTag: fb3d244b-682c-43bd-8709-6691ad81d128
+		summarizeBy: none
+		sourceColumn: CodigoUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeRegional
+		dataType: string
+		lineageTag: d7d2ceee-86f9-46b9-b5fe-715c60f53326
+		summarizeBy: none
+		sourceColumn: NomeRegional
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeUnidadeNegocio
+		dataType: string
+		lineageTag: c1d0a8ce-f264-4401-8873-77d82f4f3113
+		summarizeBy: none
+		sourceColumn: NomeUnidadeNegocio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_4
+		dataType: string
+		lineageTag: b2770fd4-2257-4dd4-ae2a-2f73d2a2baf0
+		summarizeBy: none
+		sourceColumn: Fotos_4
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoUnudade
+		dataType: string
+		lineageTag: ece3857c-1e08-4628-8f6d-b63b54db05b4
+		summarizeBy: none
+		sourceColumn: TipoUnudade
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalPontos
+		dataType: double
+		lineageTag: a2716488-13ee-4218-bd56-6c7add043844
+		summarizeBy: sum
+		sourceColumn: TotalPontos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Autor
+		dataType: string
+		lineageTag: d70a16d4-78f2-4b9c-bf33-5ecc056d874c
+		summarizeBy: none
+		sourceColumn: Autor
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataInicio
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3b084331-64a6-4843-b4fc-5dd55b4c9b27
+		summarizeBy: none
+		sourceColumn: DataInicio
+
+		variation Variation
+			isDefault
+			relationship: abb98435-a94e-4b82-accb-35fdeaf9bcc2
+			defaultHierarchy: LocalDateTable_f73e41c2-da59-4fa3-a572-5a2bc5b08505.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Pergunta
+		dataType: string
+		lineageTag: 4dee8225-294f-459d-819f-7ecf453ffd23
+		summarizeBy: none
+		sourceColumn: Pergunta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: 7153f66a-475f-44ba-bf01-b1d74a49de58
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDMoki
+		dataType: string
+		lineageTag: 825f1e01-bb4a-4375-a619-3c17fe10dc8c
+		summarizeBy: none
+		sourceColumn: IDMoki
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aproveitamento
+		dataType: string
+		lineageTag: ae401bd7-d877-4e30-9f41-03df3952bc7f
+		summarizeBy: none
+		sourceColumn: Aproveitamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column AutorSigla
+		dataType: string
+		lineageTag: 3005a4aa-d883-4b43-ba25-7f1badf8fb07
+		summarizeBy: none
+		sourceColumn: AutorSigla
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resposta
+		dataType: string
+		lineageTag: 47a87d74-d11e-4b7f-bd6f-0e96b6f2bd84
+		summarizeBy: none
+		sourceColumn: Resposta
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChaveIntegracaoUnidade
+		dataType: string
+		lineageTag: dd44789c-e963-47f3-8849-effa081c5a1c
+		summarizeBy: none
+		sourceColumn: ChaveIntegracaoUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataAvaliacao
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c9ac95c6-0224-442b-af2e-635b893ae185
+		summarizeBy: none
+		sourceColumn: DataAvaliacao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Justificativa
+		dataType: string
+		lineageTag: d5405487-f304-48b1-90df-8580be0bb75e
+		summarizeBy: none
+		sourceColumn: Justificativa
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValorResposta
+		dataType: string
+		lineageTag: 859896ee-91f2-4c01-abce-c1334ac54c22
+		summarizeBy: none
+		sourceColumn: ValorResposta
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvaliacaoPonderada
+		dataType: string
+		lineageTag: 7f8ec512-2fdf-451c-b962-3139f0c2febe
+		summarizeBy: none
+		sourceColumn: AvaliacaoPonderada
+
+		annotation SummarizationSetBy = Automatic
+
+	column idGrupoPergunta
+		dataType: string
+		lineageTag: cd21f30d-a4be-483d-aa45-6d5da8a79318
+		summarizeBy: none
+		sourceColumn: idGrupoPergunta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 66ccfbf2-8bc9-40f8-b470-b4341a403ac2
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Secao
+		dataType: string
+		lineageTag: b091b3c2-63ab-4bcf-81eb-0c8626a09f0f
+		summarizeBy: none
+		sourceColumn: Secao
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_3
+		dataType: string
+		lineageTag: ea647a9c-f478-4a49-b9d7-bca4a638dd9e
+		summarizeBy: none
+		sourceColumn: Fotos_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeGerenteRegional
+		dataType: string
+		lineageTag: 863f120b-113e-4f5c-ac33-486f7093385f
+		summarizeBy: none
+		sourceColumn: NomeGerenteRegional
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataAprovacao
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e4a2b792-4014-4fb2-a64b-6f2f335dfbb4
+		summarizeBy: none
+		sourceColumn: DataAprovacao
+
+		variation Variation
+			isDefault
+			relationship: 608bfaaa-e3d5-4e03-a0c1-f097c67bcb3a
+			defaultHierarchy: LocalDateTable_48c17bb6-7dcf-49fa-b50e-f2fdafe4e559.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Inconforme
+		dataType: string
+		lineageTag: 8ca60716-74f7-42e4-aaf5-f4746db1b708
+		summarizeBy: none
+		sourceColumn: Inconforme
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeGerenteUnidade
+		dataType: string
+		lineageTag: 4967beb1-6a36-437d-ad06-b7d6f57d6126
+		summarizeBy: none
+		sourceColumn: NomeGerenteUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aprovador
+		dataType: string
+		lineageTag: a4917912-73cf-4b15-826e-20793b0e6498
+		summarizeBy: none
+		sourceColumn: Aprovador
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataEdicao
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 2058eb60-796c-40ce-8258-32a568b737d4
+		summarizeBy: none
+		sourceColumn: DataEdicao
+
+		variation Variation
+			isDefault
+			relationship: 432653aa-15a3-4a7b-a9df-1947f4d8fbf0
+			defaultHierarchy: LocalDateTable_406db576-24fe-48d7-b00b-f35ce5f9d944.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ComentarioWorkflow
+		dataType: string
+		lineageTag: 00b1ee90-8d08-4962-b4dd-0416be4fed2b
+		summarizeBy: none
+		sourceColumn: ComentarioWorkflow
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_6
+		dataType: string
+		lineageTag: f09fd45b-5011-42ec-bc09-922e3e98f260
+		summarizeBy: none
+		sourceColumn: Fotos_6
+
+		annotation SummarizationSetBy = Automatic
+
+	column GrupoPergunta
+		dataType: string
+		lineageTag: e63c0c6a-1dd9-4856-8979-284c4603377b
+		summarizeBy: none
+		sourceColumn: GrupoPergunta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_2
+		dataType: string
+		lineageTag: 48463a49-c1de-443a-bb48-01b423ebe673
+		summarizeBy: none
+		sourceColumn: Fotos_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_9
+		dataType: string
+		lineageTag: 7e474c89-ff2d-4f7f-9413-7dd8eabc5b1b
+		summarizeBy: none
+		sourceColumn: Fotos_9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_13
+		dataType: string
+		lineageTag: ffb5cb59-ba0c-42aa-a814-e51ef23c7816
+		summarizeBy: none
+		sourceColumn: Fotos_13
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_10
+		dataType: string
+		lineageTag: 17ba476b-9956-4ab5-83cf-7ba44a5447ec
+		summarizeBy: none
+		sourceColumn: Fotos_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_8
+		dataType: string
+		lineageTag: 72707168-8921-4953-a944-9041ee929b95
+		summarizeBy: none
+		sourceColumn: Fotos_8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_11
+		dataType: string
+		lineageTag: 2ea49e50-db05-4d6b-a998-8ee49d9a20dd
+		summarizeBy: none
+		sourceColumn: Fotos_11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_7
+		dataType: string
+		lineageTag: e85bf94a-859f-4d4d-80fa-84612d5a194c
+		summarizeBy: none
+		sourceColumn: Fotos_7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fotos_12
+		dataType: string
+		lineageTag: 2626353c-4830-40a9-b4cf-de08263b55e5
+		summarizeBy: none
+		sourceColumn: Fotos_12
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHKSUM
+		dataType: string
+		lineageTag: 565a907e-a37c-43bf-8676-aa7e3dbd6d01
+		summarizeBy: none
+		sourceColumn: CHKSUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataCarga
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3b46b2ad-fec6-4757-aaa8-14091512f475
+		summarizeBy: none
+		sourceColumn: DataCarga
+
+		variation Variation
+			isDefault
+			relationship: 1c0aa04e-e2c7-4b67-ba8b-c0692112cf93
+			defaultHierarchy: LocalDateTable_59923075-1306-42e1-b073-13d0ec160006.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition tb_respostas = m
+		mode: import
+		source = ```
+				let
+				    Fonte = Sql.Database(
+				        "PR-S188\DW",
+				        "stage",
+				        [
+				            Query = " 
+				                    select *
+				                    from stage.moki.respostas r ;"
+				        ]
+				    ),
+				    #"Valor Substituído" = Table.ReplaceValue(Fonte,".",",",Replacer.ReplaceText,{"PontosPossiveis"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"PontosPossiveis", type number}}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Tipo Alterado",".",",",Replacer.ReplaceText,{"AproveitamentoResposta"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído1",{{"AproveitamentoResposta", type number}}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Tipo Alterado1",".",",",Replacer.ReplaceText,{"PontosRealizados"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2",".",",",Replacer.ReplaceText,{"TotalPontos"}),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Valor Substituído3",{{"TotalPontos", type number}, {"DataInicio", type date}}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Tipo Alterado2",".",",",Replacer.ReplaceText,{"Aproveitamento"}),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Valor Substituído4",{{"PontosRealizados", type number}, {"DataEncerramento", type date}, {"DataAvaliacao", type date}, {"DataAprovacao", type date}, {"DataEdicao", type date}, {"DataCarga", type date}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado3", each [NaoAplicavel] = "false")
+				in
+				    #"Linhas Filtradas"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

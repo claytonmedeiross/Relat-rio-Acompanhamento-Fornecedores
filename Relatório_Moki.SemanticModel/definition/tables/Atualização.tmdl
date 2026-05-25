@@ -1,0 +1,27 @@
+table Atualização
+	lineageTag: 2420922e-bf16-44de-905e-22a73c030d41
+
+	column 'Ultima Atualizacao'
+		dataType: string
+		lineageTag: 05b512a9-7109-4b51-a212-e5cd606ea433
+		summarizeBy: none
+		sourceColumn: Ultima Atualizacao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Atualização = m
+		mode: import
+		source =
+				let
+				    Fonte = DateTime.LocalNow(),
+				    Tabela = #table(
+				        {"Ultima Atualizacao"},
+				        {{Fonte}}
+				    )
+				in
+				    Tabela
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

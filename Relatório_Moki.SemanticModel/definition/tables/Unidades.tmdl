@@ -1,0 +1,326 @@
+table Unidades
+	lineageTag: 33ae1e7a-24f7-46cb-a9d7-062f4dbbcfd2
+
+	column _id
+		dataType: string
+		lineageTag: fe003681-7157-4675-9e63-bd712c56e893
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ativo
+		dataType: string
+		lineageTag: c9369c1a-8b2a-42bd-8819-0e43034e6549
+		summarizeBy: none
+		sourceColumn: Ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: ea8b2eac-9976-4d64-9746-a37a36adef73
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nome
+		dataType: string
+		lineageTag: 22595abd-b5d8-4040-b5cb-8b191577d009
+		summarizeBy: none
+		sourceColumn: Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observacoes
+		dataType: string
+		lineageTag: 67d2637e-ebdd-470e-938e-9b48670869b5
+		summarizeBy: none
+		sourceColumn: Observacoes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 58eacb3f-d766-4162-bbf6-ed64fbfea04f
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Telefones
+		dataType: string
+		lineageTag: cdd2cc17-ada6-4c19-a408-2d7e230ed20d
+		summarizeBy: none
+		sourceColumn: Telefones
+
+		annotation SummarizationSetBy = Automatic
+
+	column Logradouro
+		dataType: string
+		lineageTag: f5458eaf-d387-43de-9390-4a4a217c2ec7
+		summarizeBy: none
+		sourceColumn: Logradouro
+
+		annotation SummarizationSetBy = Automatic
+
+	column Numero
+		dataType: string
+		lineageTag: 61ddec69-7fcb-47d2-aa16-a7167c441be9
+		summarizeBy: none
+		sourceColumn: Numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column RazaoSocial
+		dataType: string
+		lineageTag: 82ae71da-b179-43df-a30d-12d145a6bef3
+		summarizeBy: none
+		sourceColumn: RazaoSocial
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubRegional
+		dataType: string
+		lineageTag: 733fd40d-d7a0-4ff9-b223-43d1e0d7846f
+		summarizeBy: none
+		sourceColumn: SubRegional
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bandeira
+		dataType: string
+		lineageTag: 6e37a0b3-8c3c-4fad-a4b9-8b817d4c0cd1
+		summarizeBy: none
+		sourceColumn: Bandeira
+
+		annotation SummarizationSetBy = Automatic
+
+	column GerenteRegional
+		dataType: string
+		lineageTag: b53a327f-33c8-49e9-b46c-3f20e02da8c6
+		summarizeBy: none
+		sourceColumn: GerenteRegional
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodigoBarras
+		dataType: string
+		lineageTag: 077aed4d-bb1c-4699-8b04-4ee5591c525d
+		summarizeBy: none
+		sourceColumn: CodigoBarras
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e4e1e80-43b6-4de6-bcf4-471f430b7301
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column Regional
+		dataType: string
+		lineageTag: 4c4d0acf-82e7-4374-a1e2-00261544f192
+		summarizeBy: none
+		sourceColumn: Regional
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		lineageTag: 79740b57-efe4-48f7-bc37-5d41b915bfde
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column GerenteUnidade
+		dataType: string
+		lineageTag: c7e50d20-acf4-473b-8215-dd3df12cfd54
+		summarizeBy: none
+		sourceColumn: GerenteUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodigoFiscal
+		dataType: string
+		lineageTag: 7aa1076c-ecbf-482c-8351-42878f169ca7
+		summarizeBy: none
+		sourceColumn: CodigoFiscal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Moeda
+		dataType: string
+		lineageTag: b59c443a-f13b-4542-a7e2-4ada9408c563
+		summarizeBy: none
+		sourceColumn: Moeda
+
+		annotation SummarizationSetBy = Automatic
+
+	column CriadoEm
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 409fe3e7-4fcf-4295-92b8-0485eb1483df
+		summarizeBy: none
+		sourceColumn: CriadoEm
+
+		variation Variation
+			isDefault
+			relationship: 649590c1-6e4e-4936-9724-c758d7c70fd2
+			defaultHierarchy: LocalDateTable_45bb68ca-236d-48ac-8e7e-bce1b0344419.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CriadoPor
+		dataType: string
+		lineageTag: a6f55592-113e-4e52-8772-29e959571a01
+		summarizeBy: none
+		sourceColumn: CriadoPor
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoUnidade
+		dataType: string
+		lineageTag: 41cf37f2-a50e-4082-84f6-b771e3571bd5
+		summarizeBy: none
+		sourceColumn: TipoUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Franqueado
+		dataType: string
+		lineageTag: 0d60ba10-4d2c-4809-a6c7-cc0f208ae8de
+		summarizeBy: none
+		sourceColumn: Franqueado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Codigo
+		dataType: string
+		lineageTag: 9df00eb8-2bdb-47da-9546-60f249ab51c0
+		summarizeBy: none
+		sourceColumn: Codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChaveIntegracao
+		dataType: string
+		lineageTag: 3defda72-d192-40f3-848f-3e198d857b80
+		summarizeBy: none
+		sourceColumn: ChaveIntegracao
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complemento
+		dataType: string
+		lineageTag: d0bff397-52f3-439d-8fa5-d6bcb576c497
+		summarizeBy: none
+		sourceColumn: Complemento
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodigoERP
+		dataType: string
+		lineageTag: ef71603a-6004-4b89-8c99-70b7783940f2
+		summarizeBy: none
+		sourceColumn: CodigoERP
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bairro
+		dataType: string
+		lineageTag: 2d46433b-1eca-4fc4-9f25-f96ffd8020a9
+		summarizeBy: none
+		sourceColumn: Bairro
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitude
+		dataType: int64
+		formatString: 0
+		lineageTag: 5abe07e0-bc8f-4226-9203-58afaf53aaef
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column QRCode
+		dataType: string
+		lineageTag: 100cb45b-e7e4-4c64-9325-a2b7034b1e07
+		summarizeBy: none
+		sourceColumn: QRCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnidadeNegocio
+		dataType: string
+		lineageTag: cdce8523-e77a-4e3b-9d95-6b804f1dbd7e
+		summarizeBy: none
+		sourceColumn: UnidadeNegocio
+
+		annotation SummarizationSetBy = Automatic
+
+	column CheckinViaLeitor
+		dataType: string
+		lineageTag: 33e55681-3d11-46bc-b44b-f175643c4521
+		summarizeBy: none
+		sourceColumn: CheckinViaLeitor
+
+		annotation SummarizationSetBy = Automatic
+
+	column idUnidade
+		dataType: string
+		lineageTag: f25c03ad-1392-4e62-8a34-8f598271a792
+		summarizeBy: none
+		sourceColumn: idUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHKSUM
+		dataType: string
+		lineageTag: 134e4991-71c4-424c-8aca-70eafa5e4f07
+		summarizeBy: none
+		sourceColumn: CHKSUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataCarga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e6e2b85d-8a7c-4a1c-8794-b943540d6f14
+		summarizeBy: none
+		sourceColumn: DataCarga
+
+		variation Variation
+			isDefault
+			relationship: 7dcd13ba-3927-4142-87d9-0bf8d5de6b7f
+			defaultHierarchy: LocalDateTable_e62026b2-013d-41ed-a5ea-4eb3f71a5d0b.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Unidades = m
+		mode: import
+		source =
+				let
+				    Fonte = Sql.Database(
+				        "PR-S188\DW",
+				        "stage",
+				        [
+				            Query = "
+				     select *
+				from stage.moki.unidades;"
+				        ]
+				    ),
+				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each ([Ativo] = "Ativo"))
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

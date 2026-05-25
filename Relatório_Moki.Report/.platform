@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Relatório_Moki"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "47214e8f-47d5-4a96-8059-ef6fde5f230c"
+  }
+}

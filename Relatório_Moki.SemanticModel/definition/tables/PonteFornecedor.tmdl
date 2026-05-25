@@ -1,0 +1,64 @@
+table PonteFornecedor
+	lineageTag: 70e7cdc2-198c-4546-b09f-116c472921a6
+
+	column IDMoki
+		dataType: string
+		lineageTag: cdec98f2-030b-44b5-a60b-ddad84305c25
+		summarizeBy: none
+		sourceColumn: IDMoki
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resposta
+		dataType: string
+		lineageTag: 844833a7-a091-4233-9d4d-fee2f4e1e20b
+		summarizeBy: none
+		sourceColumn: Resposta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Checklist
+		dataType: string
+		lineageTag: ecaa0f75-aa65-42bb-800b-5229a29a9dd3
+		summarizeBy: none
+		sourceColumn: Checklist
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PonteFornecedor = m
+		mode: import
+		source = ```
+				let
+				    Fonte = Sql.Database(
+				        "PR-S188\DW",
+				        "stage",
+				        [
+				            Query = " 
+				                    select *
+				                    from stage.moki.respostas r ;"
+				        ]
+				    ),
+				    #"Valor Substituído" = Table.ReplaceValue(Fonte,".",",",Replacer.ReplaceText,{"PontosPossiveis"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"PontosPossiveis", type number}}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Tipo Alterado",".",",",Replacer.ReplaceText,{"AproveitamentoResposta"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído1",{{"AproveitamentoResposta", type number}}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Tipo Alterado1",".",",",Replacer.ReplaceText,{"PontosRealizados"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2",".",",",Replacer.ReplaceText,{"TotalPontos"}),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Valor Substituído3",{{"TotalPontos", type number}, {"DataInicio", type date}}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Tipo Alterado2",".",",",Replacer.ReplaceText,{"Aproveitamento"}),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Valor Substituído4",{{"PontosRealizados", type number}, {"DataEncerramento", type date}, {"DataAvaliacao", type date}, {"DataAprovacao", type date}, {"DataEdicao", type date}, {"DataCarga", type date}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado3", each [NaoAplicavel] = "false"),
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Linhas Filtradas",{"IDMoki", "Resposta", "Pergunta", "Checklist"}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Outras Colunas Removidas", each ([Pergunta] = "Fornecedor Avaliado")),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Linhas Filtradas1", {"IDMoki"}),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Duplicatas Removidas", "Personalizar", each if [Resposta] = "Grupo Veper" then "[VEPER] - SLA de Fornecedores de Vigilância" else if [Resposta] = "Grupo Altum - Total Seg." then "[ALTUM - TOTAL SEG] - SLA de Fornecedores de Vigilância" else if [Resposta] = "Grupo Altum - Master" then "[ALTUM - MASTER] - SLA de Fornecedores de Vigilância " else null, type text),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Coluna Condicional Adicionada",{"Pergunta", "Checklist"}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Colunas Removidas",{{"Personalizar", "Checklist"}})
+				in
+				    #"Colunas Renomeadas"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

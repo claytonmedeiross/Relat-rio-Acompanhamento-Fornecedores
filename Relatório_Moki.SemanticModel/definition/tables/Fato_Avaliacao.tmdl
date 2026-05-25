@@ -1,0 +1,52 @@
+table Fato_Avaliacao
+	lineageTag: 8273ecc0-f5fc-4e7d-b1c4-5208c53c524f
+
+	column IDMoki
+		dataType: string
+		lineageTag: 1935f04f-994e-4922-bec4-28761848f962
+		summarizeBy: none
+		sourceColumn: IDMoki
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fornecedor
+		dataType: string
+		lineageTag: ff218224-9031-4a83-a131-9b8cf161ced2
+		summarizeBy: none
+		sourceColumn: Fornecedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column FornecedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: f8265ba3-db3c-4af1-b5ff-10d387b339a7
+		summarizeBy: count
+		sourceColumn: FornecedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fato_Avaliacao = m
+		mode: import
+		source =
+				let
+				    Fonte = PonteFornecedor_OBS,  // tabela acima
+				
+				    Join = Table.NestedJoin(
+				        Fonte,
+				        {"Fornecedor"},
+				        Dim_Fornecedor,
+				        {"Fornecedor"},
+				        "DimFornecedor",
+				        JoinKind.LeftOuter
+				    ),
+				
+				    Expandir = Table.ExpandTableColumn(Join, "DimFornecedor", {"FornecedorID"})
+				
+				in
+				    Expandir
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

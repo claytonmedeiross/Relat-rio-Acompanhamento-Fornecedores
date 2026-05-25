@@ -1,0 +1,97 @@
+relationship fb15e494-9b0a-41bd-8c9f-2179652b9edb
+	fromColumn: Fato_Avaliacao.Fornecedor
+	toColumn: Dim_Fornecedor.Fornecedor
+
+	annotation PBI_IsFromSource = FS
+
+relationship 649590c1-6e4e-4936-9724-c758d7c70fd2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Unidades.CriadoEm
+	toColumn: LocalDateTable_45bb68ca-236d-48ac-8e7e-bce1b0344419.Date
+
+relationship 7dcd13ba-3927-4142-87d9-0bf8d5de6b7f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Unidades.DataCarga
+	toColumn: LocalDateTable_e62026b2-013d-41ed-a5ea-4eb3f71a5d0b.Date
+
+relationship 71e6ca37-5fe3-a648-b3cb-4751b250d390
+	fromColumn: tb_respostas.IDMoki
+	toColumn: Fato_Avaliacao.IDMoki
+
+relationship dc0ad5cf-b19b-16a0-323f-e636c406078b
+	fromColumn: tb_respostas.idUnidade
+	toColumn: Unidades.idUnidade
+
+relationship 4716e8e9-a9a7-492c-b971-697b4d1b5884
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_cheklist.CadastradoEm
+	toColumn: LocalDateTable_0b67b71c-3541-4647-9fdc-a33245196fc4.Date
+
+relationship 1190321a-cba9-40e1-b2ad-54b54f1891d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_cheklist.DataCarga
+	toColumn: LocalDateTable_7e894088-7efe-4b87-8dde-a5d10205f7ee.Date
+
+relationship 8d5830ab-e429-4056-848a-5d4d01c9b4eb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_usuario.CadastradoEm
+	toColumn: LocalDateTable_8b921491-f149-4f24-a632-1c7d5dcb3db0.Date
+
+relationship 990ce221-3c8f-498b-a92a-ec81a1ecf204
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_usuario.DataCarga
+	toColumn: LocalDateTable_f99202cd-d7eb-48b7-9b56-ac402bd83d7b.Date
+
+relationship 69f64045-eaa1-5f43-5dca-ae11f9f6d2c3
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: tb_respostas._id
+	toColumn: tb_usuario._id
+
+relationship a8775237-3780-4838-a7f3-a68e11ed1d4f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: d_calendario.Date
+	toColumn: LocalDateTable_06fd58b6-d300-4cc6-8aea-2162ca890f06.Date
+
+relationship ad8d240b-a9c7-41e7-9856-d9a3a282718c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: d_calendario.'Periodo Mes Anterior'
+	toColumn: LocalDateTable_c96b7b66-de9d-47a9-bd82-c723f9d505dd.Date
+
+relationship f0def51c-ac6f-f170-33c6-3542274f6cdd
+	fromColumn: tb_respostas.idChecklist
+	toColumn: tb_cheklist.idChecklist
+
+relationship 608bfaaa-e3d5-4e03-a0c1-f097c67bcb3a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_respostas.DataAprovacao
+	toColumn: LocalDateTable_48c17bb6-7dcf-49fa-b50e-f2fdafe4e559.Date
+
+relationship 1c0aa04e-e2c7-4b67-ba8b-c0692112cf93
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_respostas.DataCarga
+	toColumn: LocalDateTable_59923075-1306-42e1-b073-13d0ec160006.Date
+
+relationship 432653aa-15a3-4a7b-a9df-1947f4d8fbf0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_respostas.DataEdicao
+	toColumn: LocalDateTable_406db576-24fe-48d7-b00b-f35ce5f9d944.Date
+
+relationship ce5ca0d8-45c9-486f-9ead-8ecb1a66ba37
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_respostas.DataEncerramento
+	toColumn: LocalDateTable_ee3d693e-e8d5-4bec-b87f-530720ff1489.Date
+
+relationship abb98435-a94e-4b82-accb-35fdeaf9bcc2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: tb_respostas.DataInicio
+	toColumn: LocalDateTable_f73e41c2-da59-4fa3-a572-5a2bc5b08505.Date
+
+relationship e762d1da-9fdf-8aa6-ffe7-d99aed1da25a
+	fromColumn: tb_respostas.DataAvaliacao
+	toColumn: d_calendario.Date
+
+relationship 35d98f9e-32dc-3211-f18f-c12fd36117ac
+	fromColumn: tb_respostas.IDMoki
+	toColumn: PonteFornecedor.IDMoki
+

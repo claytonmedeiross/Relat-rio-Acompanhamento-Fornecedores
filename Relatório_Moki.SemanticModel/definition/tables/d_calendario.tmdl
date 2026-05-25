@@ -1,0 +1,141 @@
+table d_calendario
+	lineageTag: cdd336bf-3618-47aa-8143-5e7f144b1ba7
+
+	column Date
+		formatString: General Date
+		lineageTag: a2f877e2-4c36-4957-b84a-3f368811d410
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: a8775237-3780-4838-a7f3-a68e11ed1d4f
+			defaultHierarchy: LocalDateTable_06fd58b6-d300-4cc6-8aea-2162ca890f06.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		formatString: 0
+		lineageTag: 052169cd-1648-4c72-aefb-de240da67034
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		formatString: 0
+		lineageTag: d3dcb054-ea5e-411c-a73b-c540859a51d6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome Mes'
+		lineageTag: b2faf342-a7af-4d7b-8a45-77f6ce963d72
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nome Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano-Mes
+		lineageTag: f0647d19-7f92-4ba6-8a4d-f932e9f5ba24
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano-Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: e0104dab-610b-4b36-af61-e2b373027ec8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Semana Ano'
+		formatString: 0
+		lineageTag: 710c4aa1-a240-4fb8-b6fb-97f4c5e72ece
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Semana Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		formatString: 0
+		lineageTag: 6ebf1438-013f-4bd2-b57a-47b29e12fc9d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dia]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dia Semana'
+		formatString: 0
+		lineageTag: 1e960af0-a42c-4fce-bd05-1f535b7b41fd
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dia Semana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome Dia'
+		lineageTag: 0f9c6575-0b8b-475e-bc3f-00cda9393493
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nome Dia]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano-Semana
+		lineageTag: 59e89449-6996-448b-8bef-b6ad41a09bb3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano-Semana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Periodo Mes Anterior'
+		formatString: General Date
+		lineageTag: 78431c43-aaac-41c8-989c-66167c1036de
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Periodo Mes Anterior]
+
+		variation Variation
+			isDefault
+			relationship: ad8d240b-a9c7-41e7-9856-d9a3a282718c
+			defaultHierarchy: LocalDateTable_c96b7b66-de9d-47a9-bd82-c723f9d505dd.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_calendario = calculated
+		mode: import
+		source =
+				
+				VAR DataMin = MINX(ALL('tb_respostas'), 'tb_respostas'[DataAvaliacao])
+				VAR DataMax = MAXX(ALL('tb_respostas'), 'tb_respostas'[DataAvaliacao])
+				RETURN
+				ADDCOLUMNS(
+				    CALENDAR(DataMin, DataMax),
+				
+				    "Ano", YEAR([Date]),
+				    "Mes", MONTH([Date]),
+				    "Nome Mes", FORMAT([Date], "MMMM"),
+				    "Ano-Mes", FORMAT([Date], "YYYY-MM"),
+				    "Trimestre", "T" & FORMAT([Date], "Q"),
+				    "Semana Ano", WEEKNUM([Date], 2),
+				    "Dia", DAY([Date]),
+				    "Dia Semana", WEEKDAY([Date], 2),
+				    "Nome Dia", FORMAT([Date], "DDDD"),
+				    "Ano-Semana", FORMAT([Date], "YYYY") & "-" & FORMAT(WEEKNUM([Date],2), "00"),
+				    "Periodo Mes Anterior", EDATE([Date], -1)
+				)
+
+	annotation PBI_Id = 84fdbd0a3533432db381467d1d12f3e1
+

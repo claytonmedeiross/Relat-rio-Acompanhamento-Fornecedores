@@ -1,0 +1,153 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 519.05731539162571,
+            "y": 8.1824133480844665
+          },
+          "nodeIndex": "d_calendario",
+          "nodeLineageTag": "cdd336bf-3618-47aa-8143-5e7f144b1ba7",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1999.2698331355223,
+            "y": 268.3208026664405
+          },
+          "nodeIndex": "Metricas",
+          "nodeLineageTag": "4fa68454-c563-4eb5-977e-4cec5b354547",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 2005.2217498129949,
+            "y": 137.26920327833744
+          },
+          "nodeIndex": "Atualização",
+          "nodeLineageTag": "2420922e-bf16-44de-905e-22a73c030d41",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 168.1038758911852,
+            "y": 390.14424454208296
+          },
+          "nodeIndex": "Dim_Fornecedor",
+          "nodeLineageTag": "dee28e7f-bd57-48ef-b5ec-aeb0b6cb5a45",
+          "size": {
+            "height": 180.52554573214087,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 565.31518586174013,
+            "y": 469.351560492271
+          },
+          "nodeIndex": "Fato_Avaliacao",
+          "nodeLineageTag": "8273ecc0-f5fc-4e7d-b1c4-5208c53c524f",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 548.86642924562091,
+            "y": 720.53247299204065
+          },
+          "nodeIndex": "Unidades",
+          "nodeLineageTag": "33ae1e7a-24f7-46cb-a9d7-062f4dbbcfd2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 980.89497247264342,
+            "y": 1.7827169256926965
+          },
+          "nodeIndex": "tb_respostas",
+          "nodeLineageTag": "e2ff92ea-5562-4565-b90f-5852bb1bae26",
+          "size": {
+            "height": 1000,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1372.8882118972183,
+            "y": 1.7827169256926965
+          },
+          "nodeIndex": "tb_cheklist",
+          "nodeLineageTag": "0bfce57b-2b80-4889-b836-28b084508221",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 10,
+          "expandedHeight": 454.34973270708986
+        },
+        {
+          "location": {
+            "x": 1346.353759938122,
+            "y": 838.87757899299334
+          },
+          "nodeIndex": "tb_usuario",
+          "nodeLineageTag": "7f582fc8-a0ee-48e9-9628-8236bd4e23f2",
+          "size": {
+            "height": 296.43456614861464,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1644.6108293409909,
+            "y": 647.16478508906573
+          },
+          "nodeIndex": "PonteFornecedor",
+          "nodeLineageTag": "70e7cdc2-198c-4546-b09f-116c472921a6",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 56.094155251902322,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

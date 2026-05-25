@@ -1,0 +1,59 @@
+table Dim_Fornecedor
+	lineageTag: dee28e7f-bd57-48ef-b5ec-aeb0b6cb5a45
+
+	column Fornecedor
+		dataType: string
+		lineageTag: 10d0e5e6-5f02-4682-b30c-b4d2ca11b226
+		summarizeBy: none
+		sourceColumn: Fornecedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column FornecedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: f8125711-98d3-4c99-85c5-43ee25e8efa9
+		summarizeBy: none
+		sourceColumn: FornecedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Fornecedor = m
+		mode: import
+		source =
+				let
+				    Fonte = Sql.Database(
+				        "PR-S188\DW",
+				        "stage",
+				        [
+				            Query = "
+				SELECT
+				    r.IDMoki,
+				    r.Pergunta,
+				    r.Resposta
+				FROM STAGE.moki.respostas r"
+				        ]
+				    ),
+				
+				    // Mantém só fornecedor
+				    FiltrarFornecedor = Table.SelectRows(Fonte, each [Pergunta] = "Fornecedor Avaliado"),
+				
+				    // Renomeia coluna
+				    Renomear = Table.RenameColumns(FiltrarFornecedor, {{"Resposta", "Fornecedor"}}),
+				
+				    // Remove colunas desnecessárias
+				    ManterColunas = Table.SelectColumns(Renomear, {"Fornecedor"}),
+				
+				    // Remove duplicados (cria lista única)
+				    Distintos = Table.Distinct(ManterColunas),
+				
+				    // Cria ID do fornecedor
+				    AddID = Table.AddIndexColumn(Distintos, "FornecedorID", 1, 1, Int64.Type)
+				
+				in
+				    AddID
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

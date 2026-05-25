@@ -1,0 +1,213 @@
+table tb_usuario
+	lineageTag: 7f582fc8-a0ee-48e9-9628-8236bd4e23f2
+
+	column _id
+		dataType: string
+		lineageTag: 0c96c98d-5182-476d-8cae-9b3ad217b971
+		summarizeBy: none
+		sourceColumn: _id
+
+		annotation SummarizationSetBy = Automatic
+
+	column PerfilUsuario
+		dataType: string
+		lineageTag: 7e70f8b8-921e-4caa-8174-6ff39ffbbb2d
+		summarizeBy: none
+		sourceColumn: PerfilUsuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 10456fc6-4e56-428b-a869-49659f23ee21
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		lineageTag: 8b7a16d3-0a14-4b67-93af-69d0bf792511
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ativo
+		dataType: string
+		lineageTag: 29b9f981-2314-4bf5-8988-2e8ec4c4aa4e
+		summarizeBy: none
+		sourceColumn: Ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Funcao
+		dataType: string
+		lineageTag: ab850614-6824-4d85-ae06-f49a7327399c
+		summarizeBy: none
+		sourceColumn: Funcao
+
+		annotation SummarizationSetBy = Automatic
+
+	column idUsuario
+		dataType: string
+		lineageTag: a5a33e7d-d87d-4e04-83df-55d4a343ae3b
+		summarizeBy: none
+		sourceColumn: idUsuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Login
+		dataType: string
+		lineageTag: 3553e6bf-e5df-411d-a39a-74b2d3aabffa
+		summarizeBy: none
+		sourceColumn: Login
+
+		annotation SummarizationSetBy = Automatic
+
+	column Departamento
+		dataType: string
+		lineageTag: 03134f51-657a-4ff0-932a-7b8a04b1b0f3
+		summarizeBy: none
+		sourceColumn: Departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChaveSSO
+		dataType: string
+		lineageTag: dce26547-0b67-4dc7-bc36-925755981272
+		summarizeBy: none
+		sourceColumn: ChaveSSO
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: 2df5b9b6-2fc8-40d0-aef4-50f996e8f292
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column CadastradoEm
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c9fb3ddf-5181-42b5-b085-cf4017482e94
+		summarizeBy: none
+		sourceColumn: CadastradoEm
+
+		variation Variation
+			isDefault
+			relationship: 8d5830ab-e429-4056-848a-5d4d01c9b4eb
+			defaultHierarchy: LocalDateTable_8b921491-f149-4f24-a632-1c7d5dcb3db0.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sobrenome
+		dataType: string
+		lineageTag: 94c43a3e-d935-47d7-94c7-ea5fe1a9a505
+		summarizeBy: none
+		sourceColumn: Sobrenome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Validado
+		dataType: string
+		lineageTag: 6ba28ea5-d0a3-4bfe-ba2d-6980182d4e58
+		summarizeBy: none
+		sourceColumn: Validado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Iniciais
+		dataType: string
+		lineageTag: 77010efe-fea6-418a-bb04-9879e2a81939
+		summarizeBy: none
+		sourceColumn: Iniciais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nome
+		dataType: string
+		lineageTag: 863e8557-7a14-4ef5-a7fd-cdfbd0bedd02
+		summarizeBy: none
+		sourceColumn: Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observacoes
+		dataType: string
+		lineageTag: ac616d56-d7a0-43d7-8a7e-fc209888809c
+		summarizeBy: none
+		sourceColumn: Observacoes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: f234df18-709c-4952-b604-42240e27699b
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Telefones
+		dataType: string
+		lineageTag: b44899e6-19ec-429c-8c0f-3d373bef6416
+		summarizeBy: none
+		sourceColumn: Telefones
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailAlternativo
+		dataType: string
+		lineageTag: d48f326f-fafc-4402-b5f3-e2e622682e8b
+		summarizeBy: none
+		sourceColumn: EmailAlternativo
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHKSUM
+		dataType: string
+		lineageTag: 283a443a-8f3c-44b8-bbf9-5320f40a571c
+		summarizeBy: none
+		sourceColumn: CHKSUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataCarga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 466e606e-6d35-4ee4-9f99-2a0234e0d087
+		summarizeBy: none
+		sourceColumn: DataCarga
+
+		variation Variation
+			isDefault
+			relationship: 990ce221-3c8f-498b-a92a-ec81a1ecf204
+			defaultHierarchy: LocalDateTable_f99202cd-d7eb-48b7-9b56-ac402bd83d7b.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition tb_usuario = m
+		mode: import
+		source = ```
+				let
+				    Fonte = Sql.Database(
+				        "PR-S188\DW",
+				        "stage",
+				        [
+				            Query = " 
+				                        select *
+				                            from stage.moki.usuarios u ;"
+				        ]
+				    ),
+				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each ([Ativo] = "true"))
+				in
+				    #"Linhas Filtradas"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

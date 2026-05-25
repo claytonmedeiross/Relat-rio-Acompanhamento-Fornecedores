@@ -1,0 +1,36 @@
+expression PonteFornecedor_OBS =
+		let
+		    Fonte = Sql.Database(
+		        "PR-S188\DW",
+		        "stage",
+		        [
+		            Query = "
+		SELECT
+		    r.IDMoki,
+		    r.Checklist,
+		    r.Pergunta,
+		    r.Resposta
+		FROM STAGE.moki.respostas r"
+		        ]
+		    ),
+		
+		    // Filtra fornecedor
+		    FiltrarFornecedor = Table.SelectRows(Fonte, each [Pergunta] = "Fornecedor Avaliado"),
+		
+		    // Renomeia
+		    Renomear = Table.RenameColumns(FiltrarFornecedor, {{"Resposta", "Fornecedor"}}),
+		
+		    // Mantém colunas necessárias
+		    Manter = Table.SelectColumns(Renomear, {"IDMoki", "Fornecedor"}),
+		
+		    // Remove duplicados
+		    Distintos = Table.Distinct(Manter)
+		
+		in
+		    Distintos
+	lineageTag: 3e26d87d-dc2a-4be5-9e85-e27e89e61513
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
